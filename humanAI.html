@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人机模式</title>
+	<link rel="stylesheet" href="css/humanAI.css" >
+</head>
+<body>
+    <h1>
+        *人机模式*
+    </h1>
+
+    <!-- 背景音乐 自动播放-->
+    <audio autoplay loop id="gamemp3" class="musiccontrol">
+        <source src="./mp3/MK.mp3" type="audio/mp3" class="musicsource">
+    </audio>
+
+    <!-- 九宫格 -->
+    <div class="nineBox">
+
+        <img class="pvp-left-img" src="img/pvpleft.gif" width="200" height="200">
+        <img class="pvp-right-img" src="img/pvpright.gif" width="200" height="200">
+
+        <!-- 左边分数 -->
+        <span class="leftScore" id="leftScore">0</span>
+        <!-- 左边九宫格 -->
+        <ul class="left" id="left">
+            <!--先放空白图片-->
+            <li><img src="./img/saizi/0.jpg" id="左1.1" onclick="locatDice('左1.1')"></li>
+            <li><img src="./img/saizi/0.jpg" id="左1.2" onclick="locatDice('左1.2')"></li>
+            <li><img src="./img/saizi/0.jpg" id="左1.3" onclick="locatDice('左1.3')"></li>
+            <li><img src="./img/saizi/0.jpg" id="左2.1" onclick="locatDice('左2.1')"></li>
+            <li><img src="./img/saizi/0.jpg" id="左2.2" onclick="locatDice('左2.2')"></li>
+            <li><img src="./img/saizi/0.jpg" id="左2.3" onclick="locatDice('左2.3')"></li>
+            <li><img src="./img/saizi/0.jpg" id="左3.1" onclick="locatDice('左3.1')"></li>
+            <li><img src="./img/saizi/0.jpg" id="左3.2" onclick="locatDice('左3.2')"></li>
+            <li><img src="./img/saizi/0.jpg" id="左3.3" onclick="locatDice('左3.3')"></li>
+        </ul>
+        <!-- 骰子 -->
+        <img src="./img/saizi/0.jpg" class="dice" onclick="diceClick()" id="diceId">
+        <div class="result-span">
+            <!--结束分数和语句显示  测试-->
+            <div class="result-header"></div>
+            <div class="result-body"></div>
+            <div class="result-result"></div>
+        </div>
+        <!-- 右边九宫格 -->
+        <ul class="right" id="right">
+            <li><img src="./img/saizi/0.jpg" id="右1.1" onclick="locatDice('右1.1')"></li>
+            <li><img src="./img/saizi/0.jpg" id="右1.2" onclick="locatDice('右1.2')"></li>
+            <li><img src="./img/saizi/0.jpg" id="右1.3" onclick="locatDice('右1.3')"></li>
+            <li><img src="./img/saizi/0.jpg" id="右2.1" onclick="locatDice('右2.1')"></li>
+            <li><img src="./img/saizi/0.jpg" id="右2.2" onclick="locatDice('右2.2')"></li>
+            <li><img src="./img/saizi/0.jpg" id="右2.3" onclick="locatDice('右2.3')"></li>
+            <li><img src="./img/saizi/0.jpg" id="右3.1" onclick="locatDice('右3.1')"></li>
+            <li><img src="./img/saizi/0.jpg" id="右3.2" onclick="locatDice('右3.2')"></li>
+            <li><img src="./img/saizi/0.jpg" id="右3.3" onclick="locatDice('右3.3')"></li>
+        </ul>
+        <!-- 右边分数 -->
+        <span class="rightScore" id="rightScore">0</span>
+    </div>
+
+
+    <script src="js/humanAI.js"></script>
+
+    <button id="button_onemore" onclick="window.location.href ='humanAI.html'">再来一局</button>
+    <button id="button_back" onclick="window.location.href ='index.html'">返回主页</button>
+</body>
+</html>
